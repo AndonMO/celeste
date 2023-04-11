@@ -10,7 +10,7 @@ namespace celeste
     internal class Balls
     {
         public int ballX, ballY, ballSpeed;
-        public int size = 5;
+        public int size = 50;
 
         public Balls(int _x, int _y, int _speed)
         {

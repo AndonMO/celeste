@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.gameEngine = new System.Windows.Forms.Timer(this.components);
+            this.scoreLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // gameEngine
@@ -38,11 +39,22 @@
             this.gameEngine.Interval = 20;
             this.gameEngine.Tick += new System.EventHandler(this.gameEngine_Tick);
             // 
+            // scoreLabel
+            // 
+            this.scoreLabel.BackColor = System.Drawing.Color.Transparent;
+            this.scoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scoreLabel.Location = new System.Drawing.Point(391, 60);
+            this.scoreLabel.Name = "scoreLabel";
+            this.scoreLabel.Size = new System.Drawing.Size(206, 40);
+            this.scoreLabel.TabIndex = 0;
+            this.scoreLabel.Text = "score";
+            // 
             // gameScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
+            this.Controls.Add(this.scoreLabel);
             this.DoubleBuffered = true;
             this.Name = "gameScreen";
             this.Size = new System.Drawing.Size(600, 600);
@@ -56,5 +68,6 @@
         #endregion
 
         private System.Windows.Forms.Timer gameEngine;
+        private System.Windows.Forms.Label scoreLabel;
     }
 }

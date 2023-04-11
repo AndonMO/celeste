@@ -21,6 +21,8 @@ namespace celeste
 
         int Counter;
 
+        int score;
+
         Boolean aDown, dDown, wDown, sDown;
 
         SolidBrush blackBrush = new SolidBrush(Color.Black);
@@ -87,6 +89,10 @@ namespace celeste
 
         private void gameEngine_Tick(object sender, EventArgs e)
         {
+
+            
+            scoreLabel.Text = $"Balls dodged: {score}";
+
             #region Move Controls
             if (wDown && hero.y > 0 && canJump == true)
             {
@@ -176,6 +182,7 @@ namespace celeste
                 if (balls[i].ballY > this.Height)
                 {
                     balls.RemoveAt(i);
+                    score++;
                 }
             }
             #endregion
