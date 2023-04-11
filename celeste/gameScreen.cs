@@ -95,7 +95,7 @@ namespace celeste
             if (sDown && hero.y < this.Height - hero.height)
             {
                 hero.Move("down");
-            }
+            }  
             if (aDown && hero.x > 0)
             {
                 hero.Move("left");
